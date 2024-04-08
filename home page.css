@@ -1,0 +1,43 @@
+h1{
+    color:rgb(55, 55, 55);
+    margin-left: 18%;
+    margin-top: 9%;
+    font-size: 100px;;
+    font-family:"Rockabye";
+  }
+  
+  body {
+    background-image: url('C:/Users/Sonya/Desktop/Моё/Images/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+  }
+
+
+
+  .button {
+    background-color: transparent;
+    width: 21%;
+    position: relative;
+    left: 17%;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+}
+  .button img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+  }
+  
+  .button:hover img {
+    transform: scale(1.05);
+  }
+
+  

@@ -1,0 +1,61 @@
+body {
+    background-image: url('C:/Users/Sonya/Desktop/Моё/Images/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+  }
+
+  h1{
+    position: relative;
+    color:rgb(55, 55, 55);
+    margin-left: 10%;
+    margin-top: 7%;
+    font-size: 70px;;
+    font-family:"Rockabye";
+    left:50%;
+  }
+
+  #canvas-container {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    top: 100px;
+    left: 110px;
+  }
+
+  canvas {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border: 5px solid #000;
+    left: 0;
+    top: 0;
+  }
+
+  button img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  button:hover img {
+    transform: scale(1.05);
+  }
+
+  #home-button {
+    background-color: transparent;
+    width: 10.5%;
+    bottom:300px;
+    left:60px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+  }

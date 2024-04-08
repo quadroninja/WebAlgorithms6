@@ -1,0 +1,98 @@
+body {
+    background-image: url('C:/Users/Sonya/Desktop/Моё/Images/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1{
+    position: relative;
+    color:rgb(55, 55, 55);
+    margin-left: 13%;
+    margin-top: 7%;
+    font-size: 70px;;
+    font-family:"Rockabye";
+    left:50%;
+  }
+
+  #canvas-container {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    top: 15%;
+    left:8%;
+  }
+
+  canvas {
+    position: relative;
+    background-color:rgb(253, 183, 7);
+    margin-bottom: 5px;
+    border: 5px solid rgb(55, 55, 55);
+    left: 0;
+    top: 0;
+  }
+
+  #play-button {
+    background-color: transparent;
+    width:17%;
+    position: relative;
+    left: 410px;
+    bottom: 590px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+  }
+
+  #back-button {
+    background-color: transparent;
+    width: 17%;
+    position: relative;
+    left: 520px;
+    bottom: 470px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+  }
+
+  #clear-button {
+    background-color: transparent;
+    width: 16%;
+    position: relative;
+    left: 638px;
+    bottom: 356px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+  }
+  
+  button img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  button:hover img {
+    transform: scale(1.05);
+  }
+
+  #home-button {
+    background-color: transparent;
+    width: 10.5%;
+    bottom:300px;
+    left:60px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+  }
+
+
