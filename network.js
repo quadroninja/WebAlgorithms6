@@ -3,22 +3,22 @@ canvas.width = 500;
 canvas.height = 500;
 
 let ctx = canvas.getContext("2d");
-ctx.fillStyle = "white";
+ctx.fillStyle = "black";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // var scaleFactor = 10; 
 // ctx.scale(scaleFactor, scaleFactor);
 
 
-let draw_color = "black";
-let draw_width = "10";
+let draw_color = "white";
+let draw_width = "35";
 let is_drawing = false;
 
 
 canvas.addEventListener("mousedown", start, false);
 canvas.addEventListener("mousemove", draw, false);
 canvas.addEventListener("mouseup", stop, false);
-canvas.addEventListener("mouseout", stop, false);
+// canvas.addEventListener("mouseout", stop, false);
 
 function start(event) {
     is_drawing = true;
@@ -47,5 +47,21 @@ function stop(event) {
     }
     ctx.preventDefault();
 }
+
+function clear() {
+    ctx.fillStyle = "black";
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+document.getElementById("clear-button").addEventListener("click", function () {clear()});
+
+document.getElementById("play-button").addEventListener('click', () => {
+    const dataURL = canvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.href = dataURL;
+    link.download = 'image.png';
+    link.click();
+  });
 
 
