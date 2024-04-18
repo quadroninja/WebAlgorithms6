@@ -18,6 +18,7 @@ var canvas = new fabric.Canvas("canvas", {
   let lines = [];
   let population = [];
   let distances = [];
+  let bestPaths = [];
   let n = 0;
 
   canvas.on("mouse:down", function (event) {
@@ -43,24 +44,11 @@ var canvas = new fabric.Canvas("canvas", {
       selectable: false,
     });
 
-    
-
     dotCoordinates.push({
       x: pointer.x,
       y: pointer.y,
     });
 
- 
-    // for (let i = 0; i < dotCoordinates.length - 1; i++) {
-    //     let line = new fabric.Line([pointer.x, pointer.y, dotCoordinates[i].x, dotCoordinates[i].y], {
-    //       stroke: "white",
-    //       selectable: false,
-    // });
-    
-    // canvas.add(line);
-    // canvas.requestRenderAll();
-    // lines.push(line);
-    // }
     canvas.add(dot);
   }
 
@@ -102,18 +90,6 @@ var canvas = new fabric.Canvas("canvas", {
             });
 
             canvas.add(newDot);
-
-
-            // for (let i = d; i < dotCoordinates.length - 1; i++) {
-  
-            //     let line = new fabric.Line([dot.x, dot.y, dotCoordinates[i].x, dotCoordinates[i].y], {
-            //         stroke: "white",
-            //         selectable: false,
-            //     });
-    
-            //     canvas.add(line);
-            //     lines.push(line);
-            // }
         }
       let ddot = dotCoordinates.pop();
 }
@@ -157,8 +133,8 @@ var canvas = new fabric.Canvas("canvas", {
 
   function mutation(chromosome) {
     while (true) {
-      let gene1 = rand(1, n);
-      let gene2 = rand(1, n);
+      let gene1 = rand(1, n-1);
+      let gene2 = rand(1, n-1);
       if (gene1 !== gene2) {
         let temp = chromosome[gene1];
         chromosome[gene1] = chromosome[gene2];
@@ -233,14 +209,67 @@ var canvas = new fabric.Canvas("canvas", {
     return [child1, child2];
   }
   
-  function drawBestPath(c, oldc, last = 0) {
-    
-    for (let i = 0; i < n; i++) {
-        ctx.beginPath();
-        ctx.moveTo(dotCoordinates[c[i]].x, dotCoordinates[c[i]].y);
-        ctx.lineTo(dotCoordinates[c[i+1]].x, dotCoordinates[c[i+1]].y);
-        ctx.strokeStyle = 'rgb(55, 55, 55)';
-        ctx.stroke();
+  function clearOldPath(last) {
+    let objects = canvas.getObjects();
+    for (let i = objects.length - 1; i >= 0; i--) {
+      if (objects[i].get("type") !== "image") {
+        canvas.remove(objects[i]);
+      }
+    }
+
+    for (let d = 0; d < dotCoordinates.length; d++) {
+      let dot = dotCoordinates[d];
+      let radius = canvas.freeDrawingBrush.width / 2;
+
+      if (last === 0) {
+        let newDot = new fabric.Circle({
+          left: dot.x - radius,
+          top: dot.y - radius,
+          radius: radius,
+          fill: canvas.freeDrawingBrush.color,
+          selectable: false,
+          });
+          canvas.add(newDot);
+      }
+      else {
+        let newDot = new fabric.Circle({
+          left: dot.x - radius,
+          top: dot.y - radius,
+          radius: radius,
+          fill: "white",
+          selectable: false,
+          });
+          canvas.add(newDot);
+      }
+    }
+  }
+
+  function drawBestPath(c) {
+    clearOldPath(0);
+    let i = 0;
+    function draw() {
+      if (i < c.length - 2) {
+        let line = new fabric.Line([dotCoordinates[c[i]].x, dotCoordinates[c[i]].y, dotCoordinates[c[i+1]].x, dotCoordinates[c[i+1]].y], {
+          stroke: "rgb(55, 55, 55)",
+          selectable: false,
+        });
+        canvas.add(line);
+        i++;
+        requestAnimationFrame(draw);
+      }
+    }
+    draw();
+  }
+
+  
+  function drawLastPath(c) {
+    clearOldPath(1);
+    for (let i = 0; i < c.length - 1; i++) {
+        let line = new fabric.Line([dotCoordinates[c[i]].x, dotCoordinates[c[i]].y, dotCoordinates[c[i+1]].x, dotCoordinates[c[i+1]].y], {
+          stroke: "white",
+          selectable: false,
+        });
+        canvas.add(line);
     }
   }
 
@@ -264,7 +293,7 @@ var canvas = new fabric.Canvas("canvas", {
     population = [];
     distances = [];
     n = dotCoordinates.length;
-    let populationSize = n*n;
+    let populationSize = n*n*3;
     let k = n*n*10;
     findDistances();
     console.log(distances);
@@ -273,6 +302,7 @@ var canvas = new fabric.Canvas("canvas", {
     }
     population = population.sort((a, b) => a[n+1] - b[n+1]);
     let oldBest = population[0];
+    bestPaths.push(oldBest);
     for (let i = 0; i < k; i++) {
       newPopulation = [];
       for (let j = 0; j < populationSize; j++) {
@@ -285,15 +315,22 @@ var canvas = new fabric.Canvas("canvas", {
       }
       }
       population = population.concat(newPopulation);
-      population.push(makeChromosome());
+      // population.push(makeChromosome());
+      // population.push(makeChromosome());
+      // population.push(makeChromosome());
       population = population.sort((a, b) => a[n+1] - b[n+1]);
       population = population.slice(0, populationSize);
-      // if (!same(population[0], oldBest)) {
-      //   drawBestPath(population[0], oldBest);
-      //   oldBest = population[0];
-      // }
+      if (!same(population[0], oldBest)) {
+        oldBest = population[0];
+        bestPaths.push(oldBest);
+      }
     }
-    drawBestPath(population[0], oldBest, 1);
+    console.log(bestPaths);
+    for (let bp = 0; bp < bestPaths.length; bp++)
+      if (bp < bestPaths.length -1 )
+        setTimeout(() => { drawBestPath(bestPaths[bp]) }, 1000*bp);
+      else
+        setTimeout(() => { drawLastPath(bestPaths[bp]) }, 1000*bp);
   }
 
   
