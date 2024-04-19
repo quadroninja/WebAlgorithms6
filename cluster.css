@@ -34,7 +34,8 @@ body {
     top: 0;
   }
 
-    #play-button {
+    
+  #play-button {
     background-color: transparent;
     width:17%;
     position: relative;
