@@ -11,7 +11,8 @@ body {
     color:rgb(55, 55, 55);
     margin-left: 20%;
     margin-top: 7%;
-    font-size: 75px;;
+    font-size: 75px;
+    width:600px;
     font-family:"Rockabye";
     left:50%;
   }
