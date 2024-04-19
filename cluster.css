@@ -12,7 +12,7 @@ body {
     margin-left: 20%;
     margin-top: 7%;
     font-size: 75px;
-    width:600px;
+    width:450px;
     font-family:"Rockabye";
     left:50%;
   }
@@ -34,36 +34,24 @@ body {
     top: 0;
   }
 
-  #play-button {
+    #play-button {
     background-color: transparent;
     width:17%;
     position: relative;
-    left: 80%;
-    bottom: 590px;
+    left: 100%;
+    bottom: 690px;
     border: none;
     cursor: pointer;
     padding: 0;
     overflow: visible;
   }
 
-  #back-button {
-    background-color: transparent;
-    width: 17%;
-    position: relative;
-    left: 96%;
-    bottom: 470px;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    overflow: visible;
-  }
-  
   #clear-button {
     background-color: transparent;
     width: 16%;
     position: relative;
-    left: 114%;
-    bottom: 356px;
+    left: 117%;
+    bottom: 550px;
     border: none;
     cursor: pointer;
     padding: 0;
