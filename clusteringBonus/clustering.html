@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Кластеризация</title>
+        <style>
+            canvas {
+              border: 1px solid black;
+            }
+            body {
+              display: flex;
+              flex-direction: row;
+            }
+            #controlsContainer
+            {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              gap: 30px;
+            }
+            .buttonClass
+            {
+              height: 30px;
+              width: 100px;
+            }
+            .sliderClass
+            {
+              width: 200px;
+            }
+        </style>
+        
+    </head>
+    <body>
+
+        <canvas id="screen" width="1024" height="768">there should be a canvas</canvas>
+        <div id="controlsContainer">
+          <div>
+            <label for="clusterNumberRange">1</label>
+            <input type="range" name="Cluster Number" min="1" max="12" value="3" class="sliderClass" id="clusterNumberRange">
+            <label for="clusterNumberRange">30 (Clusters Number)</label>
+            <label for="clusterNumberRange" id="clustersLabel">3</label>
+          </div>
+          <div>
+            <label for="epsilonRange">1</label>
+            <input type="range" name="Epsilon (DBSCAN)" min="1" max="1000" value="150" class="sliderClass" id="epsilonRange">
+            <label for="epsilonRange">1000 (Epsilon for DBSCAN)</label>
+            <label for="epsilonRange" id="epsilonLabel">150</label>
+          </div>
+          <div>
+            <label for="minPtsNumberRange">1</label>
+            <input type="range" name="Minimal points (DBSCAN)" min="1" max="30" value="3" class="sliderClass" id="minPtsNumberRange">
+            <label for="minPtsNumberRange">30 (Minimal number of points for DBSCAN)</label>
+            <label for="minPtsNumberRange" id="minPtsLabel">3</label>
+          </div>
+          <h2>Click on canvas to put a point</h2>
+          <h2>Press "Enter" to clear field</h2>
+          <h2>Press "Space" to play algorithm</h2>
+        </div>
+
+        <script src="main.js"></script>
+        
+    </body>
+</html> 
