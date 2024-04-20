@@ -32,25 +32,22 @@ body {
     left: 0;
     top: 0;
   }
+#info {
+    width: 520px;
+    position: relative;
+    top:-25%;
+    left:60%;
+    font-size: 20px;
+    color:rgb(55, 55, 55);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
 
   #play-button {
     background-color: transparent;
     width:17%;
     position: relative;
-    left: 410px;
+    left: 80%;
     bottom: 590px;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    overflow: visible;
-  }
-
-  #back-button {
-    background-color: transparent;
-    width: 17%;
-    position: relative;
-    left: 520px;
-    bottom: 470px;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -61,8 +58,8 @@ body {
     background-color: transparent;
     width: 16%;
     position: relative;
-    left: 638px;
-    bottom: 356px;
+    left:97%;
+    bottom: 450px;
     border: none;
     cursor: pointer;
     padding: 0;
