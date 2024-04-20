@@ -1,60 +1,67 @@
 body {
-    background-image: url('images/background2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  h1{
-    position: relative;
-    color:rgb(55, 55, 55);
-    margin-left: 10%;
-    margin-top: 7%;
-    font-size: 80px;;
-    font-family:"Rockabye";
-    left:50%;
+  background-image: url('images/background2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
 
-  }
+h1{
+  position: absolute;;
+  color:rgb(55, 55, 55);
+  margin-left: 10%;
+  margin-top: 7%;
+  font-size: 80px;;
+  font-family:"Rockabye";
+  left:50%;
+  width:500px;
 
-  .main {
-    display: flex;
-    height: 100%;
-    color: rgb(0, 0, 186);
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  color: rgb(0, 0, 186);
 }
 
 .controls {
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    padding: 20px;
-    margin-top: 10px;
-    margin: 20px;
-    height: 300px;
-    width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding: 20px;
+  margin: 20px;
+  height: 300px;
+  width: 300px;
+  margin-left:150px;
+  margin-top:250px;
 }
 
 .button.newButton {
-    appearance: none; 
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    border: none;
-    flex: 1 1 auto;
-    cursor: pointer;
-    transition-duration: 0.4s;
+  appearance: none; 
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  flex: 1 1 auto;
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
 
 .button:hover {
-    border: 2px solid blue;
-    background-color: white;
-    color: blue;
+  border: 2px solid blue;
+  background-color: white;
+  color: blue;
+}
+
+#treeCanvas {
+margin-left:100px;
+  margin-top:100px;
 }
 
 #fileInput {
-    display: none;
+  display: none;
 }
 
 
