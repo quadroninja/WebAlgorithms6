@@ -61,7 +61,7 @@ body {
   #home-button {
     background-color: transparent;
     width: 10.5%;
-    bottom:300px;
+    top:-67%;
     left:60px;
     position: relative;
     border: none;
