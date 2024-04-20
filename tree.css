@@ -1,5 +1,5 @@
 body {
-    background-image: url('C:/Users/Sonya/Desktop/Моё/Images/background2.jpg');
+    background-image: url('images/background2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -11,41 +11,50 @@ body {
     color:rgb(55, 55, 55);
     margin-left: 10%;
     margin-top: 7%;
-    font-size: 70px;;
+    font-size: 80px;;
     font-family:"Rockabye";
     left:50%;
+
   }
 
-  #work{
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 20%;
-    left:15%;
-  }
+  .main {
+    display: flex;
+    height: 100%;
+    color: rgb(0, 0, 186);
+}
 
-  button img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.1s ease-in-out;
-  }
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    padding: 20px;
+    margin-top: 10px;
+    margin: 20px;
+    height: 300px;
+    width: 300px;
+}
 
-  button:hover {
-    transform: scale(1.05);
-  }
-  
-  button:hover img {
-    transform: scale(1.05);
-  }
-
-  #home-button {
-    background-color: transparent;
-    width: 10.5%;
-    bottom:300px;
-    left:60px;
-    position: relative;
+.button.newButton {
+    appearance: none; 
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
     border: none;
+    flex: 1 1 auto;
     cursor: pointer;
-    padding: 0;
-    overflow: visible;
-  }
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    border: 2px solid blue;
+    background-color: white;
+    color: blue;
+}
+
+#fileInput {
+    display: none;
+}
+
+
