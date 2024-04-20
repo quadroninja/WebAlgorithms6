@@ -80,6 +80,18 @@ canvas {
   overflow: visible;
 }
 
+#Bonus-button {
+    background-color: rgb(253, 183, 7);
+    color: black;
+    padding: 15px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight:bolder;
+    border-radius: 10px;
+    border: black;
+    margin-left:1000px;
+}
+
 button img {
   width: 100%;
   height: auto;
@@ -93,5 +105,4 @@ button:hover {
 button:hover img {
   transform: scale(1.05);
 }
-
 
