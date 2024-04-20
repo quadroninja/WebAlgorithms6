@@ -66,39 +66,11 @@ var canvas = new fabric.Canvas("canvas", {
     }
 
 
-    function removeLastDot() {
-        let objects = canvas.getObjects();
-    
-        for (let i = objects.length - 1; i >= 0; i--) {
-          if (objects[i].get("type") !== "image") {
-            canvas.remove(objects[i]);
-          }
-        } 
 
-        lines = [];
-
-        for (let d = 0; d < dotCoordinates.length - 1; d++) {
-            let dot = dotCoordinates[d];
-            let radius = canvas.freeDrawingBrush.width / 2;
-
-            let newDot = new fabric.Circle({
-            left: dot.x - radius,
-            top: dot.y - radius,
-            radius: radius,
-            fill: canvas.freeDrawingBrush.color,
-            selectable: false,
-            });
-
-            canvas.add(newDot);
-        }
-      let ddot = dotCoordinates.pop();
-}
 
 
 
   document.getElementById("clear-button").addEventListener("click", function () {clearDotsAndLines()});
-
-  document.getElementById("back-button").addEventListener("click", function () {removeLastDot()});
  
   document.getElementById("play-button").addEventListener("click", function () {GeneticAlgorithm()});
 
