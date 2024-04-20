@@ -1,28 +1,46 @@
 <!DOCTYPE html>
+<html lang="eng">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
-    <link rel="stylesheet" type="text/css" href="tree.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decision tree algorithm</title>
+  <link rel="stylesheet" href="tree.css">
+  <link rel="stylesheet" href="navigator.css">
 </head>
+
+<script src="tree.js"></script>
+
 <body>
     <h1>Decision Tree</h1>
-    <a id="work">
-        <img src="C:/Users/Sonya/Desktop/Моё/Images/work-in-progress.png" width="500", height="500">
-    </a>
-    <!-- <div id="canvas-container">
-        <canvas id="canvas" width="600", height="600"></canvas>
-        <button id="clear-button" type="button"><img src="C:/Users/Sonya/Desktop/Моё/Images/clear.png" alt="Clear button"></button>
-        <button id="back-button" type="button"><img src="C:/Users/Sonya/Desktop/Моё/Images/backspace.png" alt="Back Button"></button>
-        <button id="play-button" type="button"><img src="C:/Users/Sonya/Desktop/Моё/Images/button.png" alt="Play Button"></button>
-    </div> -->
-    <a href="Home page.html">
-        <button id="home-button" class="button">
-            <img src="C:/Users/Sonya/Desktop/Моё/Images/back.png" alt="Button" width="100", height="80">
-        </button>
-    </a>
-  </body>
-  <!-- <script src="tree.js"></script> -->
+  <div class="main">
+    <canvas id="treeCanvas" width = 750 height = 750></canvas>
+    <div class="controls">
+
+      <label for="fileInput" class="button newButton">
+        Загрузить CSV
+      </label>
+      <input type="file" id="fileInput" accept=".csv" onchange="handleFile(this)">
+      <p id="attributes">Here will be attributes of your tree</p>
+      <p>Type your new data here relying in the attributes</p>
+      <input type="text" id="dataInput" onkeydown="newDataProcess(event)">
+      <p style="font-size: 45px" id="resultShow">There will be result</p>
+    </div>
+  </div>
+    <input type="checkbox" id="nav-toggle" hidden>
+  <nav class="nav">
+  <label for="nav-toggle" class="nav-toggle" onclick></label>
+  <h2 class="logo"><a href="Home page.html"> Home page </a></h2>
+  <ul>
+      <li><a href="aStar.html">Algorithm A*</a>
+      <li><a href="network.html">Neural network</a>
+      <li><a href="genetic.html">Genetic Algorithm</a>
+      <li><a href="tree.html">Decision Tree</a>
+      <li><a href="ants.html">Ants Algorithm</a>
+      <li><a href="cluster.html">Clustering</a>
+  </ul>
+  </nav>
+
+</body>
 </html>
+    
