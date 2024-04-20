@@ -54,24 +54,12 @@ h1{
     position: relative;
   }
 
-  #play-button {
+    #play-button {
     background-color: transparent;
     width:17%;
     position: relative;
-    left: 410px;
+    left: 80%;
     bottom: 590px;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    overflow: visible;
-  }
-
-  #back-button {
-    background-color: transparent;
-    width: 17%;
-    position: relative;
-    left: 520px;
-    bottom: 470px;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -82,13 +70,14 @@ h1{
     background-color: transparent;
     width: 16%;
     position: relative;
-    left: 638px;
-    bottom: 356px;
+    left:97%;
+    bottom: 450px;
     border: none;
     cursor: pointer;
     padding: 0;
     overflow: visible;
   }
+
 
   #home-button {
     background-color: transparent;
