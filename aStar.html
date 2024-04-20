@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>A-star algorithm</title>
+  <link rel="stylesheet" href="aStar.css">
+  <link rel="stylesheet" href="navigator.css">
+</head>
+
+  <script src="mainAStar.js"></script>
+  <script src="aGenerateMaze.js"></script>
+  <script src="aDrawMaze.js"></script>
+  <script src="aStar.js"></script>
+  <script src="aDrawTheShortestPath.js"></script>
+
+<body>
+  <a href="Home page.html">
+    <button id="home-button" class="button home">
+        <img src="C:/Users/Sonya/Desktop/Моё/Images/back.png" alt="Button" width="100", height="80">
+    </button>
+  </a>
+  <h1>Algorithm A*</h1>
+  <div class="main">
+    <canvas id="mazeCanvas" width ="600" height ="600"></canvas>
+    <div class="controls">
+      <div id="slider-container">
+        <input type="range" min="1" max="100" value="25" class="sliderN" id="slider">
+        <p>The size of the maze is <span id="slider-value">25</span> cells</p>
+      </div>
+      <button id="startButton" class="button newButton">Choose Start Point</button>
+      <button id="endButton" class="button newButton">Choose End Point</button>
+      <br>
+      <button id="buttonGenerateMaze" class="button newButton">Generate Maze</button>
+      <button id="buttonFindPath" class="button newButton">Find path</button>
+    </div>
+  </div>
+  <input type="checkbox" id="nav-toggle" hidden>
+  <nav class="nav">
+  <label for="nav-toggle" class="nav-toggle" onclick></label>
+  <h2 class="logo"><a href="Home page.html"> Home page </a></h2>
+  <ul>
+      <li><a href="aStar.html">Algorithm A*</a>
+      <li><a href="network.html">Neural network</a>
+      <li><a href="genetic.html">Genetic Algorithm</a>
+      <li><a href="tree.html">Decision Tree</a>
+      <li><a href="ants.html">Ants Algorithm</a>
+      <li><a href="cluster.html">Clustering</a>
+  </ul>
+  </nav>
+
+  <script> mainAStar(); </script>
+  
+</body>
+</html>
