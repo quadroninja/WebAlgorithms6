@@ -1,88 +1,97 @@
 body {
-    background-image: url('images/background2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  h1{
-    position: relative;
-    color:rgb(55, 55, 55);
-    margin-left: 20%;
-    margin-top: 7%;
-    font-size: 75px;
-    width:450px;
-    font-family:"Rockabye";
-    left:50%;
-  }
+  background-image: url('images/background2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
 
-  #canvas-container {
-    position: absolute;
-    width: 650px;
-    height: 650px;
-    top: 15%;
-    left:8%;
-  }
+h1{
+  position: relative;
+  color:rgb(55, 55, 55);
+  margin-left: 13%;
+  margin-top: 5%;
+  font-size: 95px;
+  width:450px;
+  font-family:"Rockabye";
+  left:50%;
+}
 
-  canvas {
-    position: relative;
-    background-color:white;
-    margin-bottom: 5px;
-    border: 5px solid black;
-    left: 0;
-    top: 0;
-  }
+#canvas-container {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  top: 15%;
+  left:8%;
+}
 
-    
-  #play-button {
-    background-color: transparent;
-    width:17%;
-    position: relative;
-    left: 100%;
-    bottom: 690px;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    overflow: visible;
-  }
+canvas {
+  position: relative;
+  background-color:white;
+  margin-bottom: 5px;
+  border: 5px solid black;
+  left: 0;
+  top: 0;
+}
 
-  #clear-button {
-    background-color: transparent;
-    width: 16%;
-    position: relative;
-    left: 117%;
-    bottom: 550px;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    overflow: visible;
-  }
-  
-  #home-button {
-    background-color: transparent;
-    width: 10.5%;
-    bottom:305px;
-    left:60px;
-    position: relative;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    overflow: visible;
-  }
+#info {
+  width: 500px;
+  position: relative;
+  top:-5%;
+  left:60%;
+  font-size: 20px;
+  color:rgb(55, 55, 55);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-  button img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.1s ease-in-out;
-  }
+#play-button {
+  background-color: transparent;
+  width:17%;
+  position: relative;
+  left: 120%;
+  bottom: 575px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  overflow: visible;
+}
 
-  button:hover {
-    transform: scale(1.05);
-  }
-  
-  button:hover img {
-    transform: scale(1.05);
-  }
+#clear-button {
+  background-color: transparent;
+  width: 16%;
+  position: relative;
+  left: 160%;
+  bottom: 580px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  overflow: visible;
+}
+
+#home-button {
+  background-color: transparent;
+  width: 10.5%;
+  top:-43%;
+  left:60px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  overflow: visible;
+}
+
+button img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:hover img {
+  transform: scale(1.05);
+}
 
 
