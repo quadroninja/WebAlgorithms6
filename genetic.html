@@ -6,6 +6,7 @@
     <title>Website</title>
     <link rel="stylesheet" type="text/css" href="genetic.css">
     <link rel="stylesheet" type="text/css" href="navigator.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
 </head>
 <body>
     <h1>Genetic Algorithm</h1>
@@ -20,6 +21,12 @@
             <img src="images/back.png" alt="Button" width="100", height="80">
         </button>
     </a>
+    <div id="info">
+        <p>Данный алгоритм решает задачу коммивояжёра</p>
+        <p>Вы имеете возможность расставить вершины графа</p>
+        <p>Далее алгоритм будет показывать лучшую "особь" на этой стадии алгоритма</p>
+        <p>Путь становится белым, если по завершении алгоритма он - наилучший</p>
+    </div>
     <input type="checkbox" id="nav-toggle" hidden>
     <nav class="nav">
         <label for="nav-toggle" class="nav-toggle" onclick></label>
