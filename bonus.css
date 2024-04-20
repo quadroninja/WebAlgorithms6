@@ -1,0 +1,77 @@
+body {
+    background-image: url('C:/Users/Sonya/Desktop/Моё/Images/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+ }
+
+ h2 {
+     font-family: "Rockabye";
+     font-size: 35px;
+     height: 20px;
+     color: rgb(55, 55, 55);
+ }
+
+ canvas {
+   border: 5px solid rgb(55, 55, 55);
+   background-color:white;
+ }
+
+ body {
+   display: flex;
+   flex-direction: row;
+ }
+
+ #canvasDiv {
+     margin-top: 100px;
+     margin-left: 100px;
+ }
+
+ #home-button {
+     background-color: transparent;
+     width: 10.5%;
+     top:-6%;
+     left:60px;
+     position: absolute;
+     border: none;
+     cursor: pointer;
+     padding: 0;
+     overflow: visible;
+ }
+ 
+ button img {
+     width: 100%;
+     height: auto;
+     transition: transform 0.1s ease-in-out;
+ }
+
+ button:hover {
+     transform: scale(1.05);
+ }
+
+ button:hover img {
+     transform: scale(1.05);
+ }
+
+
+ #controlsContainer
+ {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   gap: 10px;
+   margin-top: 120px;
+   margin-left: 30px;
+ }
+
+ .buttonClass
+ {
+   height: 30px;
+   width: 100px;
+ }
+
+ .sliderClass
+ {
+   width: 200px;
+ }
