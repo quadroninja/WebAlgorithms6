@@ -12,7 +12,7 @@ body {
     color:rgb(55, 55, 55);
     margin-left: 10%;
     margin-top: 7%;
-    font-size: 70px;;
+    font-size: 80px;;
     font-family:"Rockabye";
     left:50%;
   }
@@ -32,6 +32,16 @@ body {
     border: 5px solid #000;
     left: 0;
     top: 0;
+  }
+
+#info {
+    width: 530px;
+    position: relative;
+    top:0%;
+    left:55%;
+    font-size: 20px;
+    color:rgb(55, 55, 55);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   button img {
