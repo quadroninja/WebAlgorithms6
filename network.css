@@ -58,12 +58,36 @@ body {
     transform: scale(1.05);
   }
 
-  #home-button {
+ #home-button {
     background-color: transparent;
     width: 10.5%;
     top:-67%;
     left:60px;
     position: relative;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+  }
+  
+  #play-button {
+    background-color: transparent;
+    width:17%;
+    position: relative;
+    left: 550px;
+    bottom: 500px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+  }
+
+  #clear-button {
+    background-color: transparent;
+    width: 16%;
+    position: relative;
+    left: 38px;
+    bottom: 260px;
     border: none;
     cursor: pointer;
     padding: 0;
