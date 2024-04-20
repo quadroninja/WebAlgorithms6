@@ -34,6 +34,16 @@ h1{
     top: 0;
   }
 
+#info {
+    width: 530px;
+    position: relative;
+    top:-25%;
+    left:60%;
+    font-size: 20px;
+    color:rgb(55, 55, 55);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
   .Circle {
     fill: green;
     position: relative;
